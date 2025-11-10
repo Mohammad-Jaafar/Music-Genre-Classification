@@ -10,7 +10,7 @@ The project highlights how audio signals can be converted into meaningful numeri
 
 ---
 
-## Project Overview
+## Overview
 
 The goals of this project are:
 
@@ -27,47 +27,30 @@ The goals of this project are:
 
 ---
 
-## Machine Learning Techniques Used
+## Features
 
-### Tabular Audio Classification
-- **MFCC Feature Extraction**  
-- **Random Forest Classifier**
-
-### Image-based Audio Classification
-- **Mel-Spectrogram Generation**
-- **Convolutional Neural Network (CNN)**
-- **VGG16 Transfer Learning Model**
-
-### Evaluation Metrics
-- Accuracy  
-- Validation Loss  
-- Epoch-based Training Curves  
-- Classification Report (for MFCC-based model)
+-   Extract MFCC features and train a **Random Forest** classifier.
+-   Generate **Mel-Spectrogram images** for CNN and VGG16 models.
+-   Train and evaluate **CNN from scratch** and **VGG16 Transfer Learning**.
+-   Compare model performance using **accuracy**, **validation loss**, and **classification reports**.
+-   Visualize training progress and model predictions.
 
 ---
 
-## Dataset
+## Technologies Used
 
-- **Name:** GTZAN – Music Genre Classification Dataset  
-- **Classes:** 10 genres  
-  (e.g., classical, pop, rock, jazz, metal, disco, reggae, hiphop, blues, country)  
-- **Files:** 1000 audio tracks (100 per class)  
-- **Format:** WAV  
-- **Duration:** ~30 seconds each  
-
-The dataset must be placed under:
-```
-Data/genres_original/
-```
-
-Each folder should contain `.wav` files for one genre.
+-   **Python 3.9+**
+-   **Librosa** (audio feature extraction)
+-   **NumPy / Pandas**
+-   **Matplotlib / Seaborn**
+-   **TensorFlow / Keras**
+-   **Scikit-learn**
 
 ---
 
 ## Project Structure
 ```
 MusicGenreClassification/
-│
 ├── genre_classification.ipynb      # Jupyter Notebook
 ├── README.md                        # Project documentation
 └── requirements.txt                 # Python dependencies
@@ -75,27 +58,18 @@ MusicGenreClassification/
 
 ---
 
-## Installation & Setup
+## How to Run
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Mohammad-Jaafar/Music-Genre-Classification.git
-cd Music-Genre-Classification
-```
-
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-All necessary libraries such as **Librosa**, **Scikit-Learn**, **TensorFlow**, and **Matplotlib** will be installed.
-
-### 3. Run the Notebook / Script
-To open the notebook:
-```bash
-jupyter notebook genre_classification.ipynb
-```
-
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mohammad-Jaafar/Music-Genre-Classification.git
+   ```
+2. Place the GTZAN dataset in:
+   ```
+   Data/genres_original/
+   ```
+3. Open the notebook in Jupyter or Google Colab.
+4. Run all cells step-by-step to reproduce the results.
 ---
 
 ## Results & Training Performance
@@ -129,23 +103,14 @@ Transfer learning using **VGG16** achieves the best results on spectrogram image
 | CNN (scratch) | Spectrogram images | 48% | Learns local time-frequency patterns |
 | VGG16 Transfer Learning | Spectrogram images | 55% | Best model, benefits from pre-trained features |
 
----
-
-## Future Improvements
-
-- Hyperparameter tuning for CNN and Random Forest  
-- Data augmentation for spectrograms  
-- Training deeper architectures (ResNet, EfficientNet)  
-- Deploying as a web app using **Streamlit** or **Gradio**  
-- Adding prediction script for user-uploaded audio files  
 
 ---
 
 ## Author
-
 **Mohammad Jaafar**  
 mhdjaafar24@gmail.com  
 [LinkedIn](https://www.linkedin.com/in/mohammad-jaafar-)  
+[HuggingFace](https://huggingface.co/Mhdjaafar)  
 [GitHub](https://github.com/Mohammad-Jaafar)
 
 ---
